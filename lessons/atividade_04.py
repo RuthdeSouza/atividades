@@ -24,6 +24,32 @@ match codigo:
 
 # Atividade:
 
-cdg = float(input('Informe '))
+f_pag = float(input('Informe a forma de pagamento: '))
+vl_compra = float(input('Informe o valor da compra: '))
+vl_final = 0.0
+invalido = False
 
-math cdg:
+match f_pag:
+    case 1:
+        print('PIX')
+        vl_final = vl_compra
+    case 2:
+        print('À VISTA')
+        vl_final = vl_compra * 0.9
+    case 3:
+        print('DÉBITO')
+        vl_final = vl_compra * 1.05
+    case 4:
+        print('CARTÃO DE CRÉDITO')
+        vl_final = vl_compra * 1.08
+    case 5:
+        print('CHEQUE')
+        vl_final = vl_compra * 1.12
+    case _:
+        print('MODALIDADE INVÁLIDA')
+        invalido = True
+    
+if invalido:
+    print('Erro')
+else:
+    print('O valor original da compra é',vl_compra, 'O valor final da compra é', vl_final)

@@ -7,7 +7,7 @@
 
 
 soma = 0.0
-for i in range (4):
+for i in range(4):
     soma += float(input('Informe a nota: '))
 
 media = (soma) / 4
@@ -17,7 +17,7 @@ print('A média é', media)
 if media < 5:
     print('Reprovado')
 
-elif media <=7:
+elif media <= 7:
     print('Recuperação')
 
 else: 

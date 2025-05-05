@@ -24,4 +24,6 @@ match codigo:
 
 # Atividade:
 
-print(float(input('Informe ')))
+cdg = float(input('Informe '))
+
+math cdg:
